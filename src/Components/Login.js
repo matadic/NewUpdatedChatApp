@@ -21,7 +21,7 @@ export default function Login() {
   };
 
   return (
-    <div className="loginCard">
+    <div className="loginCard form-wrapper">
       <form onSubmit={handleSubmiter}>
         <div className="text_card">
           <label htmlFor="username"> Username: </label>
