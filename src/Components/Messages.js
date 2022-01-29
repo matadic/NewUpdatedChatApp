@@ -8,7 +8,6 @@ export default class Messages extends Component {
   render() {
     const { messages } = this.props;
     //For online members -  TODO
-    const { members } = this.props;
 
     return (
       <div className="messages-list">
