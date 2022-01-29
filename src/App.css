@@ -62,7 +62,7 @@
     font-size: 1.4em;
   }
 }
-@media (max-height: 400px) {
+@media (max-height: 479px) {
   .App-Head {
     display: none;
   }
