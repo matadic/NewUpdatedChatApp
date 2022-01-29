@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   box-sizing: border-box;
 }
@@ -11,13 +11,13 @@ body {
   width: 100vw;
   background-size: contain;
 }
-
+/*White theme background picture _*/
 .App {
   background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/2d9dd173426833.5c08f5634ff45.png");
 }
-
+/*Dark theme background picture _*/
 .App-dark {
-  background-image: url("https://1.bp.blogspot.com/-BqyLwDjzgtc/X1Dinb86T0I/AAAAAAAAaek/hcR7gfjykxkOHXYynBxcvb3-WQDVTgOugCLcBGAsYHQ/w439-h781/wallpaper-4k-heroscreen.png");
+  background-image: url("https://wallpapercave.com/wp/wp4410800.jpg");
 }
 
 .App-Head {
@@ -25,261 +25,46 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
   text-align: center;
   color: white;
-  border-bottom: 20px solid grey;
-  margin-bottom: 1%;
+  border-bottom: 10px solid grey;
+  margin: 0px 0px auto;
 }
 
 .App-light {
-  background-image: url("https://1.bp.blogspot.com/-BqyLwDjzgtc/X1Dinb86T0I/AAAAAAAAaek/hcR7gfjykxkOHXYynBxcvb3-WQDVTgOugCLcBGAsYHQ/w439-h781/wallpaper-4k-heroscreen.png");
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/2d9dd173426833.5c08f5634ff45.png");
+  color: black;
 }
 
 .App-head-dark {
-  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/2d9dd173426833.5c08f5634ff45.png");
+  background-image: url("https://wallpapercave.com/wp/wp4410800.jpg");
 }
 
-.App-header-dark > .btns:hover {
-  transition: ease-out 1s;
-  cursor: pointer;
-  background-color: orangered;
-}
-
-/* Message component */
-.messages-list {
-  padding: 20px 0;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  list-style: none;
-  padding-left: 0;
-  flex-grow: 1;
-  overflow: auto;
-  border: 2px lightblue solid;
-  border-radius: 10px;
-  background-image: url("https://airwallpaper.com/wp-content/uploads/wall001/Simple-Wallpaper-HD.jpg");
-  background-size: contain;
-  width: 100%;
-}
-
-.messages-message {
-  display: flex;
-  margin-top: 10px;
-}
-
-.messages-message.currentMember {
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-.currentMember > .message-content {
-  align-items: flex-end;
-}
-
-.messages-message > .avatar {
-  height: 40px;
-  border-radius: 10px;
-  display: inline-block;
-  margin: 0 10px;
-  justify-content: center;
-}
-
-.username {
-  height: 25px;
-  display: block;
-  color: white;
-  font-size: 20px;
-  font-style: italic;
-  padding: 10px;
-}
-
-.message-content > .text {
-  font-size: 20px;
-  padding: 10px;
-  max-width: 400px;
-  word-wrap: break-word;
-  border-radius: 12px;
-  background-color: rgb(255, 153, 0);
-  color: white;
-  display: inline-block;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.currentMember > .message-content .text {
-  background-color: orangered;
-}
-
-.messages-list::-webkit-scrollbar {
-  width: 10px;
-}
-.messages-list::-webkit-scrollbar-track {
-  background-color: darkgrey;
-  border-radius: 100px;
-}
-.messages-list::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  border: 5px solid rgba(0, 0, 0, 0.18);
-  background-color: grey;
-}
-
-.formChat {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 20px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-}
-
-.inputChat {
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 2px solid lightblue;
-  flex-grow: 2;
-  margin-top: 5px;
-}
-
-.buttons {
-  height: 70px;
-  width: 70px;
-  padding: 5px 10px;
-  font-size: 16px;
-  background-color: rgb(114, 147, 158);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  margin-left: 1%;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.dark-button {
-  margin: 1px auto;
-}
-
+/*For all buttons */
 .buttons:hover {
   transition: ease-out 1s;
   cursor: pointer;
-  background-color: purple;
-}
-
-/* Login  */
-.loginCard {
-  height: 28vw;
-  width: 28vw;
-  background-image: url("https://1.bp.blogspot.com/-BqyLwDjzgtc/X1Dinb86T0I/AAAAAAAAaek/hcR7gfjykxkOHXYynBxcvb3-WQDVTgOugCLcBGAsYHQ/w439-h781/wallpaper-4k-heroscreen.png");
-  margin: auto auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 1em;
-  color: white;
-  font-size: x-large;
-  font-family: "Roboto", sans-serif;
-  background-size: contain;
-  border: 10px solid white;
-}
-
-.loginInput {
-  width: 25vw;
-  height: 3vw;
-  border-radius: 5px;
-  border: 1px black solid;
   background-color: lightgray;
-  cursor: pointer;
-}
-
-.loginBtn {
-  display: block;
-  margin: auto;
-  margin-top: 30px;
-  font-family: "Roboto", sans-serif;
-  height: 5vw;
-  width: 20vw;
-  font-size: 2vw;
-  border-radius: 8px;
-  border: white 1px solid;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-}
-.loginBtn:hover {
-  transition: 1s;
-  background-color: lightgray;
-}
-.form__error-message {
-  height: 10%;
-  min-width: 190px;
-  align-items: flex-end;
-  text-align: end;
-  color: #d66565;
-  font-weight: bold;
-  margin: 2px;
-}
-.nest {
-  background-color: red;
-}
-.form__error-message {
-  font-size: 16px;
-}
-
-.text_card {
-  text-align: center;
-}
-.c-message__avatar {
-  width: 60px;
-  height: 60px;
-  background-color: rgb(134, 134, 134);
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-}
-.my-username {
-  text-align: end;
-  width: 100%;
-  padding-right: 5px;
-}
-.message_username {
-  font-size: 10px;
-  text-align: left;
-  padding-left: 5px;
-  background-color: none;
-}
-.my-username {
-  text-align: end;
-  width: 100%;
-  padding-right: 5px;
-}
-
-.text {
-  display: inline-block;
-  height: fit-content;
-  width: fit-content;
-  line-height: 1.5em;
-  border: 2px solid #dfdbdb;
-  border-radius: 1em;
-  padding: 10px;
-  margin: 10px 10px;
-  background-image: linear-gradient(to right, rgb(143, 142, 142), #dfdbdb);
-  text-align: justify;
 }
 
 .name-user {
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 2%;
 }
+
+.user-welcome {
+  font-weight: bold;
+}
+
+/*Mobile */
 @media screen and (max-width: 960px) {
-  .form-wrapper {
-    width: 100%;
-    height: 70%;
-  }
-  .loginInput {
-    width: 100%;
-    height: 30%;
+  .name-user {
+    font-size: 1.4em;
   }
 }
+@media (max-height: 400px) {
+  .App-Head {
+    display: none;
+  }
+}
+/*Vidi ovo */

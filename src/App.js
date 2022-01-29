@@ -6,6 +6,7 @@ import Messages from "./Components/Messages";
 import Login from "./Components/Login";
 
 let addedMember = {};
+let membersArr = [];
 
 export default function App() {
   const [user, setUser] = useState([]);
@@ -13,6 +14,7 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isActiveChat, setIsActiveChat] = useState(false);
   const [drone, setDrone] = useState(null);
+  const [members, setMembers] = useState([]);
 
   //New User
   const onUserLogin = (username, avatar) => {
@@ -20,7 +22,6 @@ export default function App() {
       username: username,
       avatar: avatar,
     };
-    console.log(username);
     setIsActiveChat(true);
 
     const drone = new window.Scaledrone("dLKflhddRs7041eD", {
@@ -37,6 +38,7 @@ export default function App() {
       setUser(copyMyId, avatar);
     });
     //Room subscribe
+
     const room = drone.subscribe("observable-MyRoom");
 
     room.on("message", (message) => {
@@ -49,6 +51,11 @@ export default function App() {
         let newMsgs = [...msgs];
         setMessages(newMsgs);
       }
+    });
+    room.on("members", (m) => {
+      let newMembers = m;
+      membersArr = [...newMembers];
+      setMembers(membersArr);
     });
   };
   //Logout
@@ -65,18 +72,21 @@ export default function App() {
     //Class + optional Dark/Light
     <div className={`${"Apps"} ${isDarkMode ? "App-dark" : "App"}`}>
       {/* Getting data*/}
-
       <UserContext.Provider value={{ user, drone, onUserLogin }}>
         {/*Class + optional Dark/Light*/}
-
         <div
           className={`${"App-Head"} ${
             isDarkMode ? "App-head-dark" : "App-light"
           }`}
         >
-          <div className="name-user"> Welcome: {addedMember.username}</div>
+          <div className="name-user">
+            Welcome
+            <span className="user-welcome"> {addedMember.username} </span>
+          </div>
         </div>
-        {isActiveChat && <Messages messages={messages} currentId={user} />}
+        {isActiveChat && (
+          <Messages messages={messages} currentId={user} members={members} />
+        )}
         {isActiveChat && <Input onSendMessage={sendMessage} />}
         {!isActiveChat && <Login onSetUsername={onUserLogin} />}
       </UserContext.Provider>

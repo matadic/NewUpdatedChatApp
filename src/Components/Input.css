@@ -1,0 +1,29 @@
+.inputChat {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid lightblue;
+  flex-grow: 2;
+  margin-top: 5px;
+}
+
+.buttons {
+  height: 70px;
+  width: 70px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: rgb(114, 147, 158);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin-left: 1%;
+  cursor: pointer;
+  margin-top: 5px;
+}
+@media screen and (max-width: 960px) {
+  .buttons {
+    height: 45px;
+    width: 45px;
+    font-size: 0.7em;
+  }
+}

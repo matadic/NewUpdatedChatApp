@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+import "./Input.css";
+
 export default function Input({ onSendMessage }) {
   const [text, setText] = useState("");
+
   const changeText = (e) => {
     const chatText = e.target.value;
     setText(chatText.trimStart());

@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useContext } from "react";
 import UserContext from "./UserContext";
 
+import "./Login.css";
+
 //Function Component
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -24,7 +26,10 @@ export default function Login() {
     <div className="loginCard form-wrapper">
       <form onSubmit={handleSubmiter}>
         <div className="text_card">
-          <label htmlFor="username"> Username: </label>
+          <label htmlFor="username" className="input-text-color">
+            {" "}
+            Username:{" "}
+          </label>
         </div>
         <input
           name="username"
@@ -38,11 +43,13 @@ export default function Login() {
         <br />
         <div className="form__error-message">{error}</div>
         <div className="text_card">
-          <label htmlFor="avatar">Avatar: </label>
+          <label htmlFor="avatar" className="text_card">
+            Avatar:
+          </label>
         </div>
         <select
           onChange={(e) => setAvatar(e.target.value)}
-          className="loginInput text_card"
+          className="loginInput "
         >
           <option value=" 👧"> 👧</option>
           <option value=" 🧒"> 🧒</option>

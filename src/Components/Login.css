@@ -1,0 +1,68 @@
+.loginCard {
+  margin: auto auto;
+  height: 40%;
+  width: 100%;
+  background-image: url("https://wallpapercave.com/dwp1x/wp4410716.jpg");
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 1.8em;
+  font-family: "Roboto", sans-serif;
+  background-size: auto;
+  border-top: 10px gray solid;
+  border-bottom: 10px gray solid;
+  text-align: center;
+}
+
+.loginInput {
+  width: 25vw;
+  height: 3vw;
+  border-radius: 5px;
+  border: 1px black solid;
+  background-color: lightgray;
+  cursor: auto;
+  text-align: center;
+}
+
+.loginBtn {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  height: 5vw;
+  width: 20vw;
+  font-size: 2vw;
+  border-radius: 8px;
+  border: white 1px solid;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.loginBtn:hover {
+  transition: 1s;
+  background-color: lightgray;
+}
+.form__error-message {
+  height: 10%;
+  min-width: 190px;
+  align-items: flex-end;
+  text-align: end;
+  color: #d66565;
+  font-weight: bold;
+  margin: 2px;
+}
+.form__error-message {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .loginInput {
+    width: 100%;
+    height: 100%;
+  }
+  .loginBtn {
+    width: 100%;
+    font-size: 10px;
+  }
+}
