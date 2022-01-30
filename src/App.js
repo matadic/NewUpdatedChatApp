@@ -79,9 +79,15 @@ export default function App() {
             isDarkMode ? "App-head-dark" : "App-light"
           }`}
         >
+          <button
+            className="buttons dark-button"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+          >
+            {isDarkMode ? "Light Theme" : "Dark Theme"}
+          </button>
           <div className="name-user">
             Welcome
-            <span className="user-welcome"> {addedMember.username} </span>
+            <span className="user-welcome "> {addedMember.username} </span>
           </div>
         </div>
         {isActiveChat && (
@@ -90,12 +96,6 @@ export default function App() {
         {isActiveChat && <Input onSendMessage={sendMessage} />}
         {!isActiveChat && <Login onSetUsername={onUserLogin} />}
       </UserContext.Provider>
-      <button
-        className="buttons dark-button"
-        onClick={() => setIsDarkMode(!isDarkMode)}
-      >
-        {isDarkMode ? "Light Theme" : "Dark Theme"}
-      </button>
     </div>
   );
 }

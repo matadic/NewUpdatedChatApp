@@ -1,15 +1,18 @@
 .messages-list {
-  padding: 1% 0;
-  max-width: 900px;
+  max-width: 65%;
   margin: 1% auto;
   list-style: none;
   flex-grow: 1;
+  width: 100%;
+  height: max-content;
+  display: flex;
+}
+.pokusaj {
+  flex-basis: 90%;
   overflow: auto;
+  background-image: url("https://wallpapercave.com/dwp1x/wp4410716.jpg");
   border: 3px lightblue solid;
   border-radius: 3%;
-  background-image: url("https://wallpapercave.com/dwp1x/wp4410716.jpg");
-  background-size: contain;
-  width: 100%;
 }
 
 .messages-message {
@@ -68,15 +71,6 @@
   background-color: grey;
 }
 
-.formChat {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .c-message__avatar {
   width: 60px;
   height: 60px;
@@ -85,7 +79,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 2.4rem;
 }
 .my-username {
   text-align: end;
@@ -109,4 +103,10 @@
   margin: 10px 10px;
   background-image: linear-gradient(to right, rgb(143, 142, 142), #dfdbdb);
   text-align: justify;
+}
+
+@media screen and (max-width: 960px) {
+  .pokusaj {
+    flex-basis: 100%;
+  }
 }

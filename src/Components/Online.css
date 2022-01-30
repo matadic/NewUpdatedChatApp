@@ -1,0 +1,35 @@
+.members-area {
+  display: flex;
+  border-left: grey solid 5px;
+  display: inline-block;
+  flex-basis: 15%;
+  color: grey;
+  padding: 0.2rem;
+  flex-direction: row-reverse;
+}
+.members-num {
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+.online-members li::before {
+  font-weight: bold;
+  display: inline-block;
+  color: grey;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+.online-member {
+  font-size: 1rem;
+}
+.circle {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 960px) {
+  .members-area {
+    display: none;
+  }
+}

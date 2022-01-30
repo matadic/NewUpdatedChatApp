@@ -1,17 +1,21 @@
 import { Component } from "react";
-
 import React from "react";
+import Online from "./Online";
 import "./Messages.css";
 
 //Class Component
 export default class Messages extends Component {
   render() {
     const { messages } = this.props;
+    const { members } = this.props;
     //For online members -  TODO
 
     return (
       <div className="messages-list">
-        {messages.map((m) => this.renderMessage(m))}
+        <Online members={members}></Online>
+        <div className="pokusaj">
+          {messages.map((m) => this.renderMessage(m))}
+        </div>
       </div>
     );
   }
