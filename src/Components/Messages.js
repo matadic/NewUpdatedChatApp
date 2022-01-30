@@ -1,6 +1,7 @@
 import { Component } from "react";
 import React from "react";
 import Online from "./Online";
+
 import "./Messages.css";
 
 //Class Component
@@ -8,11 +9,13 @@ export default class Messages extends Component {
   render() {
     const { messages } = this.props;
     const { members } = this.props;
-    //For online members -  TODO
+
+    //console.log(historyMessages);
 
     return (
       <div className="messages-list">
-        <Online members={members}></Online>
+        <Online members={members} />
+
         <div className="pokusaj">
           {messages.map((m) => this.renderMessage(m))}
         </div>

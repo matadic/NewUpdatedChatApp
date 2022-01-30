@@ -18,10 +18,12 @@ export default function App() {
 
   //New User
   const onUserLogin = (username, avatar) => {
-    addedMember = {
+    const addedMember = {
       username: username,
       avatar: avatar,
+      id: Math.random(),
     };
+    console.log(addedMember);
     setIsActiveChat(true);
 
     const drone = new window.Scaledrone("dLKflhddRs7041eD", {
@@ -39,7 +41,7 @@ export default function App() {
     });
     //Room subscribe
 
-    const room = drone.subscribe("observable-MyRoom");
+    const room = drone.subscribe("observable-MyRoom", { historyCount: 10 });
 
     room.on("message", (message) => {
       const { data, id, member } = message;
@@ -85,6 +87,7 @@ export default function App() {
           >
             {isDarkMode ? "Light Theme" : "Dark Theme"}
           </button>
+
           <div className="name-user">
             Welcome
             <span className="user-welcome "> {addedMember.username} </span>

@@ -109,4 +109,8 @@
   .pokusaj {
     flex-basis: 100%;
   }
+  .messages-list {
+    flex-basis: 100%;
+    max-width: 99%;
+  }
 }

@@ -37,4 +37,7 @@
     width: 45px;
     font-size: 0.7em;
   }
+  .formChat {
+    max-width: 99%;
+  }
 }

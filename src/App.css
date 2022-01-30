@@ -27,13 +27,12 @@
 .App-Head {
   font-family: "Roboto", sans-serif;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   color: white;
   border-bottom: 10px solid grey;
-  margin: 0px 0px auto;
   max-height: 150px;
+  justify-content: space-around;
 }
 
 .App-light {
@@ -55,10 +54,13 @@
 .name-user {
   font-size: 1.8em;
   margin: 2%;
+  flex-basis: 95%;
 }
 
 .user-welcome {
   font-weight: bold;
+  text-align: center;
+  justify-content: center;
 }
 
 /*Mobile */

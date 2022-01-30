@@ -28,7 +28,7 @@
 .loginBtn {
   display: block;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 8%;
   font-family: "Roboto", sans-serif;
   height: 5vw;
   width: 20vw;
@@ -63,6 +63,9 @@
   }
   .loginBtn {
     width: 100%;
-    font-size: 10px;
+    font-size: 1.5vw;
+  }
+  .text_card {
+    font-size: 1rem;
   }
 }
