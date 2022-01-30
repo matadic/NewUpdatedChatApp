@@ -18,12 +18,12 @@ export default function App() {
 
   //New User
   const onUserLogin = (username, avatar) => {
-    const addedMember = {
+    addedMember = {
       username: username,
       avatar: avatar,
       id: Math.random(),
     };
-    console.log(addedMember);
+
     setIsActiveChat(true);
 
     const drone = new window.Scaledrone("dLKflhddRs7041eD", {
